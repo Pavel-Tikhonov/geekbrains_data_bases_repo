@@ -1,0 +1,10 @@
+# Создание бекапа базы данных в терминале Ubuntu:
+mysqldump -u root -p example > example_dump.sql
+# Развернем базу данных  из файла через клиент mysql:
+# Создадим новую пустую БД:
+CREATE DATABASE sample;
+USE sample;
+SOURCE example_dump.sql
+SHOW TABLES;
+SELECT * FROM users;
+
